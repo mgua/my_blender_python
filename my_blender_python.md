@@ -134,7 +134,16 @@ so to make the packages available to blender (blender will be able to "see"
 our packages subfolder via the sys.path.append statement)
 
 
-## example: qrcode generation within blender
+## identifying what to add to the packages folder
+
+Examine your code imports. 
+From within blender, in the interactive console, try to import 
+the modules and see if you get any error "no module named..." 
+
+The modules for which the import fails are the ones you need to add
+
+
+## example 01: qrcode generation within blender
 
 Qrcode can be easily generated with python using qrcode package
 qrcode package depends on pil
@@ -215,6 +224,12 @@ if __name__ == "__main__":
     with open(output_file, 'wb') as f:
         f.write(qr_bytes)
 
-
-
 ```
+
+
+## Example 02: audio processing from microphone
+
+The test code in audio_blender.py currently crashes blender. 
+to be debugged...
+
+
